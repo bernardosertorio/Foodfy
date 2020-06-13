@@ -1,0 +1,118 @@
+{% extends "layoutcreate.njk" %}
+
+{%block content%}
+
+  <form class="form_crate_container" method="POST" action="">
+
+    <div class="header_create_container">
+
+      <h1> Creating Revenue </h1>
+
+      <button type="submit"> Save Recipe </button>
+
+    </div>
+
+    <div class="card_create_container">
+
+      <div>
+
+        <h2> Recipe Image </h2>
+        <input 
+          type="url"
+          name="recipe_url"
+          placeholder="http//"
+        >
+        
+      </div>
+
+      <div>
+
+        <h2> Title </h2>
+        <input 
+          type="text"
+          name="title"
+        >
+        
+      </div>
+
+      <div>
+
+        <h2> Author </h2>
+        <input 
+          type="text"
+          name="author"
+        >
+        
+      </div>
+
+      <div id="ingredients">
+
+        <h2> Ingredients </h2>
+
+        <div class="ingredient">
+
+          <input 
+            type="text"
+            name="ingredients[]"
+            value=""
+            placeholder="Add Ingredient"
+          >
+        </div>
+
+      </div>
+
+      <button type="button" class="add-ingredient"> Add Ingredient </button>
+
+      <div id="preparation">
+
+        <h2> Preparation Steps </h2>
+
+        <div class="preparation_steps">
+      
+          <input 
+            type="text"
+            name="preparation_steps[]"
+            value=""
+            placeholder="Add preparation Step"
+          >
+        </div>
+
+      </div>
+
+      <button type="button" class="add-step"> Add Step Preparation </button>
+
+      <div>
+
+        <h2> Featured </h2>
+
+        <div>
+       
+          <span> <input type="radio" name="featured" value="True" checked> Yes </span>
+          <span> <input type="radio" name="featured" value="False"> No </span>
+
+        </div>  
+        
+      </div>
+
+      <div>
+
+        <h2> Additional Information </h2>
+
+        <textarea 
+          name="Additional_information" 
+          type="textarea" 
+        >
+        </textarea>
+        
+      </div>
+      
+    </div>
+
+    <script src="/scripts.js"></script>
+
+  </form> 
+
+
+
+{%endblock%}
+ 

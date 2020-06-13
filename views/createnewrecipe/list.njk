@@ -1,0 +1,40 @@
+{% extends "layoutcreate.njk" %}
+
+{%block content%}
+ 
+    <div class="card-table-container">
+
+        <a class="button" href="/create"> Create New Recipe Here </a>
+
+        <table width="100%">
+
+            <thead>
+
+                <th> Manage Recipes </th>
+            
+            </thead>
+
+            <tbody>
+
+                {% for recipe in recipes %}
+
+                    <tr>
+
+                        <td>
+                            <img src="{{recipe_url}}">
+                            <h1> {{recipe_title}} </h1>
+                            <h2> {{recipe_author}} </h2> 
+                            <a href="/newrecipe/{{recipe.id}}"> To view </a> 
+                        </td>
+                
+                    </tr> 
+
+                {% endfor %}                       
+            
+            </tbody>
+
+        </table>
+    
+    </div>
+
+{%endblock%}

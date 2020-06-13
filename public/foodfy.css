@@ -1,0 +1,566 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: white;
+    font-family: 'Roboto', sans-serif;
+    
+    
+}
+
+a {
+    /*O "text-decoration" igual a "none" vai retirar o sublinhado de baixo das palavras "Sobre" e "Receitas"*/
+    text-decoration: none;
+    
+}
+
+
+
+/* ------------------ Cabeçalho -------------------- */
+
+body header {
+  margin: 32px 0;
+  /*O "display" Adicionando grid no header*/
+  display: grid;
+  /*O "grid-template-columns" configura o grid com 2 colunas primeira com 210 pixels "Onde está a img",*/
+  /*e a segunda com 1 frection "Onde está os itens 'Sobre' e 'Receitas'*/
+  grid-template-columns: 210px 1fr ;
+  /*O "align-items" está centralizando o conteúdo das duas celulas*/
+  align-items: center;
+}
+
+body header .wrapper {
+  display: grid;
+  width: 940px;
+  /*A margin vai ser zerada em cima e embaixo, e nas laterais será automatico*/
+  margin: 0px auto;
+} 
+
+body header .menu a {
+  position: 5px; 
+  font-size: 16px;
+  color: #111111;
+  margin-left: 270px;
+  padding: 0px 70px;
+    
+}
+
+body header .menu a + a { 
+  margin-left: 5px;
+
+}
+
+body header .menu a + a + a { 
+  margin-left: -10px;
+
+}
+
+
+
+body header .wrapper img {
+    margin-left: 50px;
+    margin-bottom: -27px;
+
+}
+
+
+/* ---------------- Apresentação ---------------- */
+
+
+
+
+body .hero {
+    display: grid;
+    /*Aqui foi configurado duas colunas flexivas*/
+    grid-template-columns: 1fr 1fr;
+    background: #FBDFDB;
+    border-radius: 30px;
+    width: center;
+    margin: 25px;
+}
+
+body .hero .intro {
+    align-self: center;
+    width: 300px;
+    padding: 60px;
+}
+
+body .hero .intro h1 {
+    font-size: 32px;
+    line-height: 38px;
+    color: #111111;
+
+    margin-bottom: 10px;
+}
+
+body .hero .intro p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 16px;
+    line-height: 26px;
+
+}
+
+body .hero img {
+    justify-self: center;
+}
+
+body .acess {
+font-size: 18px;
+color: #111111;
+line-height: 30px;
+margin-bottom: 5px;
+margin-left: 40px;
+margin-top: 25px;
+
+  }  
+
+
+/* ============= cards ================ */
+
+
+body .wrapper main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 1300px; /* segura o container no centro da página */
+  margin: 0 auto;
+  
+  
+
+}
+
+body .wrapper main .content {
+  display: flex;
+  margin: 30px;
+  margin-top: 20px;
+  margin-left: -15px;
+
+}
+
+body .wrapper main .content img {
+  max-width: 100%;
+  display: flex;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-left: 25px;
+    
+    
+}
+
+body .wrapper main .content h4 {
+  font-size: 18px;
+  line-height: 21px;
+  color: #111111;
+  margin-bottom: 5px;
+  align-items: center;
+  margin-left: 25px;
+    
+}
+
+body .wrapper main .content p {
+    font-size: 14px;
+    line-height:16px;
+    color: #777;
+    margin-left: 25px;
+    
+    
+}
+
+body .wrapper main .description {
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+
+    padding: 20px 0 30px;
+}
+
+footer {
+    /*O "padding" com 23px em cima e embaixo, e 0px nas laterais*/
+    padding: 23px 0;
+    background: #EEEEEE;
+    font-size: 14px;
+    color: #999999;
+    text-align: center;
+
+}
+
+/* === FEATURED === */
+
+.featured { 
+    background: #ffdc77;
+    color: #111;
+    padding: 2px 8px;
+    border-radius: 25px;
+    margin-left: 20px;
+
+}
+
+
+
+/* ===== SOBRE ===== */
+
+.sobre .container {
+  margin-top: 100px;
+  margin-right: 200px;
+  margin-left: 100px;
+}
+
+.sobre h3 {
+  font-size: 24px;
+  color: #111111;
+  font-weight: bold;
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+
+.sobre p {
+  font-size: 18px;
+  color: #444444;
+  line-height: 28px;
+  margin-bottom: 50px;
+}
+
+.sobre h4 {
+  font-size: 20px;
+  color: #111111;
+  margin: -20px 0 20px 0;
+}
+
+
+
+/* ===== RECIPE ====== */
+
+.recipe-img img {
+  width: 980px;
+  height: 300px;
+  border-radius: 15px;
+  margin-left: -11px;
+}
+
+.recipe-titles {
+  text-align: center;
+}
+
+.recipe-titles h2 {
+  margin-top: 50px;
+  color: #111;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.recipe-titles h4 {
+  margin-top: 5px;
+  font-size: 20px;
+  color: #777;
+}
+
+#recipe-ingredientes {
+  margin-top: 50px;
+}
+
+#recipe-modopreparo {
+  margin-top: 40px;
+}
+
+#recipe-info {
+  margin: 50px 0;
+}
+
+.recipe-estilo {
+  margin-left: 30px;
+
+}
+
+.recipe-estilo p {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #444;
+  line-height: 28px;
+}
+
+.recipe-estilo h4 {
+  font-size: 24px;
+  color: #111;
+}
+
+.recipe-estilo ul {
+  margin-top: 20px;
+}
+
+.recipe-estilo ul li {
+  font-size: 18px;
+  color: #444;
+  line-height: 28px;
+}
+
+.recipe-estilo a {
+  list-style-type: none;
+  text-decoration: none;
+  padding-left: 10px;
+  font-size: 12px;
+  color: #999999;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.esconder {
+  display: none;
+}
+
+
+
+/* --------------- Create Recipe list ------------------- */
+
+
+body header .menu-create-list {
+  display: block;
+  padding: 30px;
+  width: 1500px;
+  height: 80px;
+  opacity: 100%;
+  /*A margin vai ser zerada em cima e embaixo, e nas laterais será automatico*/
+  margin-top: -32px;
+  background-color: #111111;
+  
+}
+
+body header .menu-create-list img {
+  width: 90.6px;
+  height: 26.9px;
+  opacity: 100%;
+  margin-left: 100px;
+  margin-top: 25px;
+  
+}
+
+body .card-table-container {
+  display: block;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+body .card-table-container .button {
+  background: #ffdc77;
+  text-decoration: none;
+  padding: 10px 32px;
+  border-radius: 4px;
+  margin-left: 1000px;
+  width: 100%;
+  color: black;
+  font-size: 14px; 
+
+}
+
+body .card-table-container table {
+  margin-top: 20px;
+  margin-left: 12px;
+  border-spacing: 0;
+  max-width: 1300px;
+  
+     
+}
+
+body .card-table-container thead tr th {
+  display: flex;
+  opacity: 100%;
+  width: 198px;
+  height: 28px;
+  font-size: 24px;
+  margin-top: 50px;
+  margin-left: 92px;
+  
+}
+
+body .card-table-container table tbody {
+  margin-top: 50px;
+  margin-left: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 92px;
+  
+  
+}
+
+body .card-table-container table tbody tr td img {
+  width: 200px;
+  height: 100px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 8.57px;
+  opacity: 100%;
+    
+}
+
+body .card-table-container table tbody tr td h1 {
+  font-family: Roboto-Regular;
+  height: 21px;
+  opacity: 100%;
+  color: #111111 100%;
+  font-size: 18px;
+  text-align: center;
+  margin-top: -65px;
+  margin-right: 220px;
+  
+  
+}
+
+body .card-table-container table tbody tr td h2 {
+  font-family: Roboto-Regular;
+  width: 103px;
+  height: 16px;
+  opacity: 100%;
+  color: #777777;
+  font-size: 14px;
+  margin-left: 235PX;
+  margin-top: -135px;
+}
+
+body .card-table-container tbody tr td a {
+  font-family: Roboto-Regular;
+  width: 63px;
+  height: 16px;
+  font-size: 14px;
+  padding: 30px 55px;
+  text-decoration: none;
+  color: #6558C3 100%;
+  margin-top: -60px;
+  
+}
+
+body .card-table-container tbody tr td:first-child {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-items: center;
+}
+
+body .card-table-container thead tr th:last-child, td:last-child {
+  text-align: center;
+}
+
+
+
+
+
+
+
+/* ------------ create recipe form ------------------- */
+
+
+
+body .form_crate_container {
+  margin-top: 20px;
+  margin-left: 12px;
+  border-spacing: 0;
+  padding: 60px 120px;
+}
+
+body .form_crate_container .header_create_container h1 {
+  
+  height: 28px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #111111;
+  font-size: 24px;
+  
+}
+
+body .form_crate_container .header_create_container button {
+
+  background: #6558C3;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin-top: -15px;
+  border-radius: 4px;
+  margin-left: 800px;
+  width: 139px;
+  height: 37px;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+
+}
+
+body .form_crate_container .card_create_container h2 {
+
+  height: 19px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  color: #111111;
+  margin: 10px;
+  margin-left: 0px;
+}
+
+body .form_crate_container .card_create_container input[type="url"] {
+
+  width: 940px;
+  height: 25px;
+  border-radius: 4px;
+  color: #555;  
+
+}
+
+body .form_crate_container .card_create_container input[type="url"]::placeholder {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+
+body .form_crate_container .card_create_container input[type="text"] {
+
+  width: 940px;
+  height: 25px;
+  border-radius: 4px;
+  color: #555;  
+
+}
+
+body .form_crate_container .card_create_container button[type="button"] {
+
+  background-color: white;
+  width: 194px;
+  height: 19px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #6558C3;
+  font-size: 14px;
+  text-align: left;
+  border: none;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+body .form_crate_container .card_create_container span {
+  width: 70px;
+  color: #555;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+
+body .form_crate_container .card_create_container textarea {
+
+  width: 940px;
+  height: 200px;
+  border-radius: 4px;
+  color: #555;
+  font-size: 14px;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
