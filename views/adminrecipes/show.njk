@@ -8,12 +8,12 @@
         <div class="container">
             <div class="recipe-img">
 
-            <img src="{{item.image}}" alt="Imagem de {{item.title}}">
+            <img src="{{recipe.image}}" alt="Imagem de {{recipe.title}}">
 
             </div>
             <div class="recipe-titles">
-                <h2>{{item.title}}</h2>
-                <p>por {{item.author}}</p>
+                <h2>{{recipe.title}}</h2>
+                <p>por {{recipe.author}}</p>
             </div>
         </div>
         
@@ -28,7 +28,7 @@
                     <h4 class="inline-block">Ingredientes</h4>
                     <a id="action" class="inline-block cursor">Esconder</a>
                     <ul id="list0">
-                        {% for i in item.ingredients %}
+                        {% for i in recipe.ingredients %}
                             <li>{{i}}</li>
                         {% endfor %}
                     </ul>
@@ -38,7 +38,7 @@
                     <h4 class="inline-block"> Modo de preparo </h4>
                     <a id="action" class="inline-block cursor"> Esconder </a>
                     <ul id="list1" class="">
-                        {% for i in item.preparation %}
+                        {% for i in recipe.preparation %}
                             <li>{{i}}</li>
                         {% endfor %}
                     </ul>
@@ -47,7 +47,7 @@
                 <div id="recipe-info" class="recipe-estilo">
                     <h4 class="inline-block"> Informações adicionais </h4>
                     <a id="action" class="inline-block cursor"> Esconder </a>
-                    <p id="list2">{{item.information}}</p>
+                    <p id="list2">{{recipe.information}}</p>
                 </div>
             
             </section>

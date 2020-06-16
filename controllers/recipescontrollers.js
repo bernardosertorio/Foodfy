@@ -1,13 +1,26 @@
-
+const data = require('../data.json')
 
 
 
 exports.list = function(req, res) {
 
-  return res.render("recipes/list")
+  return res.render("recipes/list", {recipes: data.recipes})
 }
 
-exports.details = function(req, res) {
+exports.show = function(req, res) {
+  
+  const recipeIndex = req.params.index
 
-  return res.render("recipes/details")
+  const recipe = recipes[recipeIndex]
+  
+
+  if (!recipe) { 
+      
+      return res.send("Recipe not found!")
+
+  }
+
+  return res.render("recipes/details", { recipe })
+ 
+
 }

@@ -6,15 +6,15 @@
     <div class="wrapper">
 
         <main>
-            {% for item in items %}
+            {% for recipe in recipes %}
                 <div class="content">
-                    <div class="card" id = "{{item.id}}">
-                        <img src="{{item.image}}" alt="imagem de {{item.image}}">
+                    <div class="card" id = "{{recipe.id}}">
+                        <img src="{{recipe.image}}" alt="imagem de {{recipe.image}}">
                         {% if item.featured %}
                             <div class='featured'>Featured</div>
                         {% endif %}
-                        <h4>{{item.title}}</h4>
-                        <p>{{item.author}}</p>               
+                        <h4>{{recipe.title}}</h4>
+                        <p>{{recipe.author}}</p>               
                     </div>
                 </div>
             {% endfor %} 

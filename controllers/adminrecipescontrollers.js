@@ -4,13 +4,13 @@ const data = require('../data.json')
 
 exports.list = function(req, res) {
 
-  return res.render("createnewrecipe/list")
+  return res.render("adminrecipes/list", {recipes: data.recipes})
   
 }
 
 exports.create = function(req, res) {
 
-  return res.render("createnewrecipe/create")
+  return res.render("adminrecipes/create")
   
 }
 
@@ -43,8 +43,28 @@ exports.post = function(req, res) {
 
     if (err) return res.send("Write file error!")
 
-    return res.redirect("/newrecipe")
+    return res.redirect("/adminrecipes/list")
   })
+}
+
+exports.show = function(req, res) {
+
+  const { id } = req.params
+
+  const foundRecipe = data.recipes.find(function(recipe) {
+
+    return recipe.id == id
+   
+  })
+
+  if (!foundRecipe) return res.send('Recipe not found!')
+
+  const recipe = {
+    ...foundRecipe
+  }
+
+  return res.render("adminrecipes/show", { recipe })
+
 }
 
 

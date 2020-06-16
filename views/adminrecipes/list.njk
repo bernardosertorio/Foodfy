@@ -1,4 +1,4 @@
-{% extends "layoutcreate.njk" %}
+{% extends "layoutadmin.njk" %}
 
 {%block content%}
  
@@ -22,9 +22,9 @@
 
                         <td>
                             <img src="{{recipe_url}}">
-                            <h1> {{recipe_title}} </h1>
-                            <h2> {{recipe_author}} </h2> 
-                            <a href="/newrecipe/{{recipe.id}}"> To view </a> 
+                            <h1> {{recipe.title}} </h1>
+                            <h2> {{recipe.author}} </h2> 
+                            <a href="/adminrecipes/{{recipe.id}}"> To view </a> 
                         </td>
                 
                     </tr> 

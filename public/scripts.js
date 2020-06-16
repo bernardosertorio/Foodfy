@@ -9,7 +9,7 @@ for (let card of cards) {
         
         const recipeIndex = card.getAttribute('id')
 
-        window.location.href = `/recipe/${recipeIndex}` // href - faz o redirecionamento
+        window.location.href = `/details/${recipeIndex}` // href - faz o redirecionamento
 
     })
 }

@@ -386,8 +386,7 @@ body .card-table-container table tbody {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-left: 92px;
-  
-  
+   
 }
 
 body .card-table-container table tbody tr td img {
@@ -397,7 +396,7 @@ body .card-table-container table tbody tr td img {
   background-size: cover;
   border-radius: 8.57px;
   opacity: 100%;
-    
+  margin-left: -10px;  
 }
 
 body .card-table-container table tbody tr td h1 {
@@ -421,7 +420,7 @@ body .card-table-container table tbody tr td h2 {
   color: #777777;
   font-size: 14px;
   margin-left: 235PX;
-  margin-top: -135px;
+  margin-top: -130px;
 }
 
 body .card-table-container tbody tr td a {
@@ -432,7 +431,7 @@ body .card-table-container tbody tr td a {
   padding: 30px 55px;
   text-decoration: none;
   color: #6558C3 100%;
-  margin-top: -60px;
+  margin-top: -50px;
   
 }
 

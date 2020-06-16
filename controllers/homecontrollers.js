@@ -11,7 +11,7 @@ exports.list = function(req, res) {
 
   }
 
-  return res.render("home/index", {recipesFiltered})
+  return res.render("home/index", {recipes: recipesFiltered})
 
 } 
 
