@@ -9,7 +9,7 @@
             {% for recipe in recipes %}
                 <div class="content">
                     <div class="card" id = "{{recipe.id}}">
-                        <img src="{{recipe.image}}" alt="imagem de {{recipe.image}}">
+                        <img src="{{recipe.image_url}}" alt="imagem de {{recipe.image_url}}">
                         {% if item.featured %}
                             <div class='featured'>Featured</div>
                         {% endif %}

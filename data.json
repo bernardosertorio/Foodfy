@@ -2,7 +2,7 @@
   "recipes": [
     {
       "id": 0,
-      "recipe_url": "/public/assets/burger.png",
+      "image_url": "/assets/burger.png",
       "title": "Triplo bacon burger",
       "author": "Jorge Relato",
       "ingredients": [
@@ -27,7 +27,7 @@
     },
     {
       "id": 1,
-      "recipe_image": "public/assets/pizza.png",
+      "image_url": "/assets/pizza.png",
       "title": "Pizza 4 estações",
       "author": "Fabiana Melo",
       "ingredients": [
@@ -56,8 +56,8 @@
     },
     {
       "id": 2,
-      "recipe_image": "/assets/asinhas.png",
-      "title": "Asinhas de frango",
+      "image_url": "/assets/asinhas.png",
+      "title": "Asinhas de frango ao Barbecue",
       "author": "Vania Steroski",
       "ingredients": [
         "12 encontros de asinha de galinha, temperados a gosto",
@@ -75,7 +75,7 @@
     },
     {
       "id": 3,
-      "recipe_image": "/assets/lasanha.png",
+      "image_url": "/assets/lasanha.png",
       "title": "Lasanha mac n' cheese",
       "author": "Juliano Vieira",
       "ingredients": [
@@ -97,7 +97,7 @@
     },
     {
       "id": 4,
-      "recipe_image": "/assets/espaguete.png",
+      "image_url": "/assets/espaguete.png",
       "title": "Espaguete ao alho",
       "author": "Júlia Kinoto",
       "ingredients": [
@@ -123,7 +123,7 @@
     },
     {
       "id": 5,
-      "recipe_image": "/assets/doce.png",
+      "image_url": "/assets/doce.png",
       "title": "Docinhos pão-do-céu",
       "author": "Ricardo Golvea",
       "ingredients": [
@@ -147,7 +147,7 @@
     },
     {
       "id": 6,
-      "recipe_image": "/assets/burger.png",
+      "image_url": "/assets/burger.png",
       "title": "Triplo bacon burger",
       "author": "Jorge Relato",
       "ingredients": [
@@ -172,7 +172,7 @@
     },
     {
       "id": 7,
-      "recipe_image": "/assets/pizza.png",
+      "image_url": "/assets/pizza.png",
       "title": "Pizza 4 estações",
       "author": "Fabiana Melo",
       "ingredients": [
@@ -201,8 +201,8 @@
     },
     {
       "id": 8,
-      "recipe_image": "/assets/asinhas.png",
-      "title": "Asinhas de frango",
+      "image_url": "/assets/asinhas.png",
+      "title": "Asinhas de frango ao Barbecue",
       "author": "Vania Steroski",
       "ingredients": [
         "12 encontros de asinha de galinha, temperados a gosto",
@@ -216,8 +216,8 @@
         "Para servir fica bonito com salada, ou abuse da criatividade."
       ],
       "featured": "True",
-      "Additional_information": "        "
+      "Additional_information": ""
     }
+
   ]
 }
-

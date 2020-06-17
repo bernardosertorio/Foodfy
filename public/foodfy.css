@@ -376,7 +376,7 @@ body .card-table-container thead tr th {
   height: 28px;
   font-size: 24px;
   margin-top: 50px;
-  margin-left: 92px;
+  margin-left: 90px;
   
 }
 
@@ -385,7 +385,7 @@ body .card-table-container table tbody {
   margin-left: 80px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-left: 92px;
+  margin-left: 98px;
    
 }
 
@@ -408,7 +408,8 @@ body .card-table-container table tbody tr td h1 {
   text-align: center;
   margin-top: -65px;
   margin-right: 220px;
-  
+  align-items: left;
+  white-space: nowrap;
   
 }
 
@@ -419,8 +420,8 @@ body .card-table-container table tbody tr td h2 {
   opacity: 100%;
   color: #777777;
   font-size: 14px;
-  margin-left: 235PX;
-  margin-top: -130px;
+  margin-left: 240pX;
+  margin-top: -140px;
 }
 
 body .card-table-container tbody tr td a {
@@ -431,9 +432,10 @@ body .card-table-container tbody tr td a {
   padding: 30px 55px;
   text-decoration: none;
   color: #6558C3 100%;
-  margin-top: -50px;
+  margin-top: -60px;
   
 }
+
 
 body .card-table-container tbody tr td:first-child {
   display: grid;
@@ -444,9 +446,6 @@ body .card-table-container tbody tr td:first-child {
 body .card-table-container thead tr th:last-child, td:last-child {
   text-align: center;
 }
-
-
-
 
 
 

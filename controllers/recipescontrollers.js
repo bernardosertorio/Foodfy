@@ -20,7 +20,7 @@ exports.show = function(req, res) {
 
   }
 
-  return res.render("recipes/details", { recipe })
+  return res.render("recipes/show", { recipe })
  
 
 }

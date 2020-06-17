@@ -7,11 +7,11 @@ exports.list = function(req, res) {
 
   for (let i = 0; i < 6; i++) {
 
-   recipesFiltered.push(data[i])
-
+   recipesFiltered.push(data.recipes[i])
+  
   }
 
-  return res.render("home/index", {recipes: recipesFiltered})
+  return res.render("home/index", {items: recipesFiltered})
 
 } 
 
