@@ -1,7 +1,4 @@
 
-
-// Show a one recipe
-
 const cards = document.querySelectorAll('.card')
 
 for (let card of cards) {
@@ -9,12 +6,10 @@ for (let card of cards) {
         
         const recipeIndex = card.getAttribute('id')
 
-        window.location.href = `recipes/show/${recipeIndex}` // href - faz o redirecionamento
+        window.location.href = `/recipe/${recipeIndex}` // href - faz o redirecionamento
 
     })
 }
-
-
 
 // Hide and show sessions in recipes
 

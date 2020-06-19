@@ -1,24 +1,14 @@
-{%extends "layoutadmin.njk"%}
+{%extends "layout.njk"%}
 
   
 {%block content%} 
 
-    <section class="header-admin-show">
-        
-        <div class="butoon-edit">
-            <a class="button" href="/edit"> Edit Recipe </a>
-        </div>
+    <section>
 
-        <div class="header-admin-items">
-            
-            <h1>Receita: {{recipe.title}}</h1>
-            
-        </div>
-
-        <div class="admin-show-container">
+        <div class="container">
             <div class="recipe-img">
 
-              <img src="{{recipe.image_url}}" alt="Imagem de {{recipe.title}}">
+                <img src="{{recipe.image_url}}" alt="Imagem de {{recipe.title}}">
 
             </div>
             <div class="recipe-titles">
@@ -30,12 +20,13 @@
     </section>
 
     <main>
-        <div class="admin-show-container-items">
+        <div class="container">
 
             <section>
 
                 <div id="recipe-ingredientes" class="recipe-estilo">
                     <h4 class="inline-block">Ingredientes</h4>
+                    <a id="action" class="inline-block cursor">Esconder</a>
                     <ul id="list0">
                         {% for i in recipe.ingredients %}
                             <li>{{i}}</li>
@@ -45,8 +36,9 @@
 
                 <div id="recipe-modopreparo" class="recipe-estilo">
                     <h4 class="inline-block"> Modo de preparo </h4>
+                    <a id="action" class="inline-block cursor"> Esconder </a>
                     <ul id="list1" class="">
-                        {% for i in recipe.preparation_steps %}
+                        {% for i in recipe.preparation %}
                             <li>{{i}}</li>
                         {% endfor %}
                     </ul>
@@ -54,12 +46,19 @@
 
                 <div id="recipe-info" class="recipe-estilo">
                     <h4 class="inline-block"> Informações adicionais </h4>
-                    <p id="list2">{{recipe.Additional_information}}</p>
+                    <a id="action" class="inline-block cursor"> Esconder </a>
+                    <p id="list2">{{recipe.information}}</p>
                 </div>
             
             </section>
         
         </div>
     </main>
+
+        <script src="/scripts.js"></script>
             
 {%endblock%}
+
+  
+
+    

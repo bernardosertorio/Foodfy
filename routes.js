@@ -10,13 +10,14 @@ const adminrecipes = require('./controllers/adminrecipescontrollers')
 
 routes.get("/home", home.list)
 routes.get("/about", home.about)
+routes.get("/home:index", home.show)
 
 
 
 // Recipes routes
 
 routes.get("/recipes", recipes.list)
-routes.get("/recipes/:id", recipes.show)
+routes.get("/recipes:index", recipes.show)
 
 
 
@@ -25,6 +26,7 @@ routes.get("/recipes/:id", recipes.show)
 routes.get("/adminrecipes", adminrecipes.list)
 routes.get("/create", adminrecipes.create)
 routes.post("/create", adminrecipes.post)
+routes.get("/adminrecipes/:id", adminrecipes.show)
 
 
 
