@@ -1,0 +1,29 @@
+{% extends "layoutadmin.njk" %}
+
+{%block content%}
+
+  <form class="form_crate_container" method="POST" action="/adminrecipes?_method=PUT">
+
+    <div class="header_create_container">
+
+      <h1> Edit Recipe </h1>
+
+      <button type="submit"> Save Recipe </button>
+      <button type="submit"> Edit Recipe </button>
+
+
+      {% include 'adminrecipes/fields.njk' %}
+
+      <input
+        type="hidden"
+        name="id"
+        value={{recipe.id}}
+      />
+      
+    </div>
+
+  </form>  
+
+  <script src="/scripts.js"></script>
+
+{% endblock content %}

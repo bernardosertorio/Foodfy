@@ -1,0 +1,102 @@
+
+     <div class="card_create_container">
+
+      <div>
+
+        <h2> Recipe Image </h2>
+        <input 
+          type="url"
+          name="image_url"
+          placeholder="http//"
+          value= "{{ recipe.image_url }}"   
+        >
+        
+      </div>
+
+      <div>
+
+        <h2> Title </h2>
+        <input 
+          type="text"
+          name="title"
+          value= "{{ recipe.title }}" 
+        >
+        
+      </div>
+
+      <div>
+
+        <h2> Author </h2>
+        <input 
+          type="text"
+          name="author"
+          value= "{{ recipe.author }}" 
+        >
+        
+      </div>
+
+      <div id="ingredients">
+
+        <h2> Ingredients </h2>
+
+        <div class="ingredient">
+
+          <input 
+            type="text"
+            name="ingredients[]"
+            placeholder="Add Ingredient"
+            value= "{{ recipe.ingredients[] }}" 
+          >
+        </div>
+
+      </div>
+
+      <button type="button" class="add-ingredient"> Add Ingredient </button>
+
+      <div id="preparation">
+
+        <h2> Preparation Steps </h2>
+
+        <div class="preparation_steps">
+      
+          <input 
+            type="text"
+            name="preparation_steps[]"
+            placeholder="Add preparation Step"
+            value= "{{ recipe.preparation_steps[] }}" 
+          >
+        </div>
+
+      </div>
+
+      <button type="button" class="add-step"> Add Step Preparation </button>
+
+      <div>
+
+        <h2> Featured </h2>
+
+        <div>
+       
+          <span> <input type="radio" name="featured" value="True" checked> Yes </span>
+          <span> <input type="radio" name="featured" value="False"> No </span>
+
+        </div>  
+        
+      </div>
+
+      <div>
+
+        <h2> Additional Information </h2>
+
+        <textarea 
+          name="Additional_information" 
+          type="textarea" 
+          value= "{{ recipe.Additional_information }}"
+        >
+        </textarea>
+        
+      </div>
+      
+    </div>
+  
+
