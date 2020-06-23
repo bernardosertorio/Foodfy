@@ -2,15 +2,18 @@
 
 {%block content%}
 
-  <form class="form_crate_container" method="POST" action="/adminrecipes?_method=PUT">
+  <div class="form_crate_container">
 
-    <div class="header_create_container">
+    <section class="header_create_container">
 
       <h1> Edit Recipe </h1>
 
-      <button type="submit"> Save Recipe </button>
-      <button type="submit"> Edit Recipe </button>
+      <button class="save-button" type="submit" form="form-edit"> Save Recipe </button>
+      <button class="delete-button" type="submit" form="form-delete"> Delete </button>
 
+    </section>
+
+    <form method="POST" action="/adminrecipes?_method=PUT" id="form-edit"> 
 
       {% include 'adminrecipes/fields.njk' %}
 
@@ -19,10 +22,19 @@
         name="id"
         value={{recipe.id}}
       />
-      
-    </div>
 
-  </form>  
+    </form>
+
+    <form method="POST" action="/adminrecipes?_method=DELETE" id="form-delete">
+
+      <input
+        type="hidden"
+        name="id"
+        value={{recipe.id}}
+      />
+    </form>
+
+  </div>  
 
   <script src="/scripts.js"></script>
 

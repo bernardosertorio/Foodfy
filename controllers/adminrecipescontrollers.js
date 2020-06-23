@@ -80,10 +80,41 @@ exports.edit = function(req, res) {
   if (!foundRecipe) return res.send('Recipe not found!')
 
   const recipe = {
-    ...foundRecipe
+    ...foundRecipe,
   }
 
-  return res.render('adminrecipes/edit', { recipe })
+   return res.render('adminrecipes/edit', { recipe })
+}
+
+exports.put = function(req, res) {
+
+  const { id } = req.body
+  let index = 0
+
+  const foundRecipe = data.recipes.find(function(recipe, foundIndex) {
+    
+    if (recipe.id == id) {
+      index = foundIndex
+      return true
+    }
+  })
+
+  if ( !foundRecipe ) return res.send("Recipe not found!")
+
+  const recipe = {
+    ...foundRecipe,
+    ...req.body,
+    id: Number(req.body.id)
+  }
+
+  data.recipes[index] = recipe
+
+  fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
+    if(err) return res.send("Write erro!")
+
+    return res.redirect(`/adminrecipes/${id}`)
+  })
+  
 }
 
 

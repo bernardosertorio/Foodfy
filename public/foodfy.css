@@ -613,8 +613,28 @@ main .admin-show-container-items {
 }
 
 
+/* ---------- edit Fields ---------- */
+
+.header_create_container {
+  display: grid;
+  margin-top: -10px;
+}
 
 
+.form_crate_container .header_create_container .delete-button {
+
+  background: rgb(250, 4, 4);
+  text-decoration: none;
+  padding: 10px 30px;
+  margin-top: -36px;
+  border-radius: 4px;
+  margin-left: 640px;
+  width: 139px;
+  height: 38px;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+}
 
 
 

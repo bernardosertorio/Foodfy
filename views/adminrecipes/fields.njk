@@ -1,5 +1,5 @@
 
-     <div class="card_create_container">
+    <div class="card_create_container">
 
       <div>
 
@@ -38,35 +38,60 @@
       <div id="ingredients">
 
         <h2> Ingredients </h2>
-
-        <div class="ingredient">
-
-          <input 
-            type="text"
-            name="ingredients[]"
-            placeholder="Add Ingredient"
-            value= "{{ recipe.ingredients[] }}" 
-          >
-        </div>
+        
+        {% if recipe.ingredients %}
+          {% for ingredient in recipe.ingredients %}
+              <div class="ingredient">
+                <input 
+                  type="text"
+                  name="ingredients[]"
+                  placeholder="Add Ingredient"
+                  value= "{{ ingredient }}" 
+                >
+              </div>
+          {% endfor %}
+        {% else %}
+            <div class="ingredient">
+              <input
+              type="text"
+              name="ingredients[]"
+              value=""
+              placeholder="Add Ingredient"
+              >
+            </div>
+        {% endif %}
 
       </div>
 
       <button type="button" class="add-ingredient"> Add Ingredient </button>
 
+    
       <div id="preparation">
 
         <h2> Preparation Steps </h2>
 
-        <div class="preparation_steps">
-      
-          <input 
-            type="text"
-            name="preparation_steps[]"
-            placeholder="Add preparation Step"
-            value= "{{ recipe.preparation_steps[] }}" 
-          >
-        </div>
-
+        {% if recipe.preparation_steps %}
+          {% for step in recipe.preparation_steps %}
+            <div class="preparation_steps">
+              <input 
+                type="text"
+                name="preparation_steps[]"
+                placeholder="Add preparation Step"
+                value= "{{ step }}" 
+              >
+            </div>
+          {% endfor %}
+          {% else %}
+            <div class="preparation_steps">
+              <input
+                type="text"
+                name="preparation_steps[]"
+                value=""
+                placeholder="Add preparation Step"
+              >
+            </div>
+        {% endif %}
+        
       </div>
 
       <button type="button" class="add-step"> Add Step Preparation </button>
@@ -85,16 +110,10 @@
       </div>
 
       <div>
-
-        <h2> Additional Information </h2>
-
-        <textarea 
-          name="Additional_information" 
-          type="textarea" 
-          value= "{{ recipe.Additional_information }}"
-        >
-        </textarea>
         
+        <h2> Additional Information </h2>
+        <textarea cols="133" rows="12" wrap="hard" name="additional_information" type="textarea"> {{ recipe.additional_information }} </textarea> 
+
       </div>
       
     </div>
