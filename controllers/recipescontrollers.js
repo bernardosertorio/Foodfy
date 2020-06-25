@@ -9,18 +9,20 @@ exports.list = function(req, res) {
 
 exports.show = function(req, res) {
   
-  const recipeIndex = req.params.index
+  const { id } = req.params 
 
-  const recipe = recipes[recipeIndex]
-  
+  const foundRecipe = data.recipes.find(function(recipe) {
 
-  if (!recipe) { 
-      
-      return res.send("Recipe not found!")
+    return recipe.id == id
 
+  })
+
+  if (!foundRecipe) return res.send("Recipe not found!")
+
+  const recipe = {
+    ...foundRecipe
   }
-
-  return res.render("recipes/show", { recipe })
- 
-
+  
+  return res.render("recipes/show", {recipe})
+  
 }

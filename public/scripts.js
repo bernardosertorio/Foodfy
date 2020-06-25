@@ -1,15 +1,4 @@
 
-const cards = document.querySelectorAll('.card')
-
-for (let card of cards) {
-    card.addEventListener('click', function() {
-        
-        const recipeIndex = card.getAttribute('id')
-
-        window.location.href = `/recipes/show/${recipeIndex}` // href - faz o redirecionamento
-
-    })
-}
 
 // Hide and show sessions in recipes
 
@@ -19,9 +8,9 @@ for (let i = 0; i < esconder.length; i++) {
     esconder[i].addEventListener('click', function() {
         document.querySelector("#list" + i).classList.toggle("esconder")
         if(document.querySelector("#list" + i).classList.contains("esconder")){
-            esconder[i].innerHTML = "mostrar"
+            esconder[i].innerHTML = "show"
         } else {
-            esconder[i].innerHTML = "esconder"
+            esconder[i].innerHTML = "to hide"
         }
     })
 }
@@ -71,5 +60,15 @@ if (addIngredientBtn && addStepBtn) {
         steps.appendChild(newField);
     }
 }
+
+// Delete Recipe
+
+const formDelete = document.querySelector("#form-delete")
+    formDelete.addEventListener("submit", function(event) {
+        const confirmation = confirm("Do you want delete?")
+        if (!confirmation) {
+            event.preventDefault()
+        }
+    })
 
 

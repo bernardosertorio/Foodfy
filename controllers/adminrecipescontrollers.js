@@ -80,7 +80,7 @@ exports.edit = function(req, res) {
   if (!foundRecipe) return res.send('Recipe not found!')
 
   const recipe = {
-    ...foundRecipe,
+    ...foundRecipe
   }
 
    return res.render('adminrecipes/edit', { recipe })
@@ -115,6 +115,25 @@ exports.put = function(req, res) {
     return res.redirect(`/adminrecipes/${id}`)
   })
   
+}
+
+exports.delete = function(req, res) {
+
+  const { id } = req.body
+
+  const filteredRecipe = data.recipes.filter(function(recipe) {
+    
+    return recipe.id != id
+  })
+
+  data.recipes = filteredRecipe
+
+  fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
+    if (err) return res.send("Write file error!")
+
+    return res.redirect("/adminrecipes")
+  })
+
 }
 
 

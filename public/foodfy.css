@@ -238,7 +238,7 @@ footer {
   width: 980px;
   height: 300px;
   border-radius: 15px;
-  margin-left: -11px;
+  margin-left: 240px;
 }
 
 .recipe-titles {
@@ -585,7 +585,7 @@ body .form_crate_container .card_create_container textarea {
   padding: 25px 0px;
 }
 
-.header-admin-show .admin-show-container .recipe-img img {
+.header-admin-show .admin-show-container .recipe-img-url img {
   width: 1000px;
   height: 300px;
   border-radius: 15px;

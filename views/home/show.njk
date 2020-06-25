@@ -13,7 +13,7 @@
             </div>
             <div class="recipe-titles">
                 <h2>{{recipe.title}}</h2>
-                <p>por {{recipe.author}}</p>
+                <p>by {{recipe.author}}</p>
             </div>
         </div>
         
@@ -25,29 +25,29 @@
             <section>
 
                 <div id="recipe-ingredientes" class="recipe-estilo">
-                    <h4 class="inline-block">Ingredientes</h4>
-                    <a id="action" class="inline-block cursor">Esconder</a>
+                    <h4 class="inline-block">Ingredients</h4>
+                    <a id="action" class="inline-block cursor"> To hide </a>
                     <ul id="list0">
-                        {% for i in recipe.ingredients %}
-                            <li>{{i}}</li>
+                        {% for ingredient in recipe.ingredients %}
+                            <li>{{ingredient}}</li>
                         {% endfor %}
                     </ul>
                 </div>
 
                 <div id="recipe-modopreparo" class="recipe-estilo">
-                    <h4 class="inline-block"> Modo de preparo </h4>
-                    <a id="action" class="inline-block cursor"> Esconder </a>
+                    <h4 class="inline-block"> Preparation Steps </h4>
+                    <a id="action" class="inline-block cursor"> To hide </a>
                     <ul id="list1" class="">
-                        {% for i in recipe.preparation %}
-                            <li>{{i}}</li>
+                        {% for step in recipe.preparation_steps %}
+                            <li>{{step}}</li>
                         {% endfor %}
                     </ul>
                 </div>
 
                 <div id="recipe-info" class="recipe-estilo">
-                    <h4 class="inline-block"> Informações adicionais </h4>
-                    <a id="action" class="inline-block cursor"> Esconder </a>
-                    <p id="list2">{{recipe.information}}</p>
+                    <h4 class="inline-block"> Additional Information </h4>
+                    <a id="action" class="inline-block cursor"> To hide </a>
+                    <p id="list2">{{recipe.additional_information}}</p>
                 </div>
             
             </section>

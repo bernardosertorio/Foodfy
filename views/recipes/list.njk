@@ -9,12 +9,12 @@
             {% for recipe in recipes %}
                 <div class="content">
                     <div class="card" id = "{{recipe.id}}">
-                        <img src="{{recipe.image_url}}" alt="imagem de {{recipe.image_url}}">
+                        <a href="recipes/{{recipe.id}}"> <img src="{{recipe.image_url}}" alt="imagem de {{recipe.image_url}}"> </a>
                         {% if item.featured %}
                             <div class='featured'>Featured</div>
                         {% endif %}
                         <h4>{{recipe.title}}</h4>
-                        <p>{{recipe.author}}</p>               
+                        <p> by {{recipe.author}}</p>               
                     </div>
                 </div>
             {% endfor %} 

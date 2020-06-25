@@ -16,7 +16,6 @@ exports.list = function(req, res) {
 } 
 
 
- 
 exports.about = function(req, res) {
 
   return res.render("home/about")
@@ -25,20 +24,20 @@ exports.about = function(req, res) {
 
 
 exports.show = function(req, res) {
-  
-  const recipeIndex = req.params.index
 
-  const recipe = recipes[recipeIndex]
-  
+  const { id } = req.params
 
-  if (!recipe) { 
-      
-      return res.send("Recipe not found!")
+  const foundRecipe = data.recipes.find(function(recipe) {
+    
+    return recipe.id == id
+  })
 
+  if (!foundRecipe) return res.send("Recipe not found!")
+
+  const recipe = {
+    ...foundRecipe
   }
 
-  return res.render("/home/show", { recipe })
- 
-
+  return res.render("home/show", {recipe})
 }
  

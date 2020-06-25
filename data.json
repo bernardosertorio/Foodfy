@@ -217,6 +217,27 @@
       ],
       "featured": "True",
       "additional_information": ""
+    },
+    {
+      "id": 9,
+      "image_url": "https://images.unsplash.com/photo-1567446991062-e8a1209f70b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "title": "Nenem com fome",
+      "author": "Bernardo Sertório",
+      "ingredients": [
+        "3 kg de carne moída (escolha uma carne magra e macia)",
+        "Queijo minas",
+        "paçoca de nata",
+        "leite de mãe ",
+        "mingau"
+      ],
+      "preparation_steps": [
+        "Leve novamente ao forno até derreter a mussarela.",
+        "Retire do congelador, frite ou asse e está pronto.",
+        "",
+        ""
+      ],
+      "featured": "True",
+      "additional_information": "Mete no bucho que o Brasil é nosso! Papapi é nossa, irra!            "
     }
   ]
 }

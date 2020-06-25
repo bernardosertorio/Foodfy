@@ -6,7 +6,7 @@
     <section class="header-admin-show">
         
         <div class="butoon-edit">
-            <a class="button" href="/adminrecipes/edit"> Edit Recipe </a>
+            <a class="button" href="/adminrecipes/{{recipe.id}}/edit"> Edit Recipe </a>
         </div>
 
         <div class="header-admin-items">
@@ -16,7 +16,7 @@
         </div>
 
         <div class="admin-show-container">
-            <div class="recipe-img">
+            <div class="recipe-img-url">
 
               <img src="{{recipe.image_url}}" alt="Imagem de {{recipe.title}}">
 
@@ -37,8 +37,8 @@
                 <div id="recipe-ingredientes" class="recipe-estilo">
                     <h4 class="inline-block">Ingredientes</h4>
                     <ul id="list0">
-                        {% for i in recipe.ingredients %}
-                            <li>{{i}}</li>
+                        {% for ingredient in recipe.ingredients %}
+                            <li>{{ingredient}}}}</li>
                         {% endfor %}
                     </ul>
                 </div>
@@ -46,8 +46,8 @@
                 <div id="recipe-modopreparo" class="recipe-estilo">
                     <h4 class="inline-block"> Modo de preparo </h4>
                     <ul id="list1" class="">
-                        {% for i in recipe.preparation_steps %}
-                            <li>{{i}}</li>
+                        {% for step in recipe.preparation_steps %}
+                            <li>{{step}}</li>
                         {% endfor %}
                     </ul>
                 </div>
