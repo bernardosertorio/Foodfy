@@ -13,12 +13,10 @@ routes.get("/about", home.about)
 routes.get("/home/:id", home.show)
 
 
-
 // Recipes routes
 
 routes.get("/recipes", recipes.list)
 routes.get("/recipes/:id", recipes.show)
-
 
 
 // Admin recipes routes
@@ -29,6 +27,7 @@ routes.post("/create", adminrecipes.post)
 routes.get("/adminrecipes/:id", adminrecipes.show)
 routes.get("/adminrecipes/:id/edit", adminrecipes.edit)
 routes.put("/adminrecipes", adminrecipes.put)
-routes.get("/adminrecipes", adminrecipes.delete)
+routes.delete("/adminrecipes", adminrecipes.delete)
+
 
 module.exports = routes

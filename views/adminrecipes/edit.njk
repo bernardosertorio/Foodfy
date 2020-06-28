@@ -1,6 +1,6 @@
 {% extends "layoutadmin.njk" %}
 
-{%block content%}
+{% block content %}
 
   <div class="form_crate_container">
 
@@ -21,7 +21,7 @@
         type="hidden"
         name="id"
         value={{recipe.id}}
-      />
+      >
 
     </form>
 
@@ -31,7 +31,8 @@
         type="hidden"
         name="id"
         value={{recipe.id}}
-      />
+      >
+      
     </form>
 
   </div>  

@@ -24,7 +24,9 @@ exports.post = function(req, res) {
 
       return res.send('Please, fill all fields!')
     }
+  
   } 
+
 
   let id = 1
   const lastRecipe = data.recipes[data.recipes.length - 1]
@@ -33,9 +35,18 @@ exports.post = function(req, res) {
     id = lastRecipe.id + 1
   }
 
+  let { ingredients, preparation_steps } = req.body
+
+
+  ingredients = req.body.ingredients.filter(el => { return el != ""})
+  preparation_steps = req.body.preparation_steps.filter(el => { return el != ""})
+
+
   data.recipes.push({
     id,
-    ...req.body
+    ...req.body,
+    ingredients,
+    preparation_steps
   }) 
 
 
@@ -101,13 +112,25 @@ exports.put = function(req, res) {
 
   if ( !foundRecipe ) return res.send("Recipe not found!")
 
+
+  let { ingredients, preparation_steps } = req.body
+
+
+  ingredients = req.body.ingredients.filter(el => { return el != ""})
+  preparation_steps = req.body.preparation_steps.filter(el => { return el != ""})
+
+
+  
   const recipe = {
-    ...foundRecipe,
+    ...foundRecipe, 
     ...req.body,
-    id: Number(req.body.id)
+    id: Number(req.body.id),
+    ingredients,
+    preparation_steps
   }
 
   data.recipes[index] = recipe
+
 
   fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
     if(err) return res.send("Write erro!")
@@ -121,12 +144,12 @@ exports.delete = function(req, res) {
 
   const { id } = req.body
 
-  const filteredRecipe = data.recipes.filter(function(recipe) {
+  const filteredRecipes = data.recipes.filter(function(recipe) {
     
-    return recipe.id != id
+    return id != recipe.id
   })
 
-  data.recipes = filteredRecipe
+  data.recipes = filteredRecipes
 
   fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
     if (err) return res.send("Write file error!")
