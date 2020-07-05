@@ -4,6 +4,12 @@
 
 <h1 align="center">
   <img src="public/assets/cozinheiro.png">
+  <img src="public/assets/CapturaDeTelaHome.png">
+  <img src="public/assets/CapturaDeTelaRecipes.png">
+  <img src="public/assets/CapturaDeTelaShow.png">
+  <img src="public/assets/CapturaDeTelaList.png">
+  <img src="public/assets/CapturaDeTelaCreating.png">
+  <img src="public/assets/CapturaDeTelaEdit.png">
 </h1>
 
 ## 🔖 Sobre
