@@ -16,7 +16,6 @@ esconder[i].addEventListener('click', function() {
 }
 
 
-
 // Add ingretientes in the form
 
 //Buttons function

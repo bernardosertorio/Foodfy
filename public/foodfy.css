@@ -5,23 +5,24 @@
 }
 
 body {
-    background: white;
-    font-family: 'Roboto', sans-serif;
-    
+  background: white;
+  font-family: 'Roboto', sans-serif; 
     
 }
 
 a {
-    /*O "text-decoration" igual a "none" vai retirar o sublinhado de baixo das palavras "Sobre" e "Receitas"*/
-    text-decoration: none;
-    
+ text-decoration: none;    
 }
 
 
 
 /* ------------------ Cabeçalho -------------------- */
 
+
+
 body header {
+  width: 100%;
+  max-width: 980px;
   margin: 32px 0;
   /*O "display" Adicionando grid no header*/
   display: grid;
@@ -30,11 +31,12 @@ body header {
   grid-template-columns: 210px 1fr ;
   /*O "align-items" está centralizando o conteúdo das duas celulas*/
   align-items: center;
+
 }
 
 body header .wrapper {
   display: grid;
-  width: 940px;
+  width: 980px;
   /*A margin vai ser zerada em cima e embaixo, e nas laterais será automatico*/
   margin: 0px auto;
 } 
@@ -57,7 +59,6 @@ body header .menu a + a + a {
   margin-left: -10px;
 
 }
-
 
 
 body header .wrapper img {
@@ -104,7 +105,7 @@ body .hero .intro p {
 }
 
 body .hero img {
-    justify-self: center;
+  justify-self: center;
 }
 
 body .acess {
@@ -128,7 +129,6 @@ body .wrapper main {
   margin: 0 auto;
   
   
-
 }
 
 body .wrapper main .content {
@@ -140,15 +140,17 @@ body .wrapper main .content {
 }
 
 body .wrapper main .content img {
-  max-width: 100%;
+  width: 431px;
+  max-width: 980px; 
+  height: auto;
+  object-fit: contain;
   display: flex;
   border-radius: 15px;
   margin-bottom: 15px;
   cursor: pointer;
-  margin-top: 30px;
+  margin-top: 20px;
   margin-left: 25px;
-    
-    
+       
 }
 
 body .wrapper main .content h4 {
@@ -235,7 +237,7 @@ footer {
 /* ===== RECIPE ====== */
 
 .recipe-img img {
-  width: 1200px;
+  width: 1180px;
   height: 300px;
   border-radius: 15px;
   margin-left: 115px;

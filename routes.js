@@ -8,9 +8,10 @@ const adminrecipes = require('./controllers/adminrecipescontrollers')
 
 // Home routes
 
-routes.get("/home", home.list)
-routes.get("/about", home.about)
+routes.get("/", home.list)
 routes.get("/home/:id", home.show)
+routes.get("/about", home.about)
+
 
 
 // Recipes routes
