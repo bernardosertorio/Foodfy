@@ -12,13 +12,13 @@
   <img src="public/assets/CapturaDeTelaEdit.png">
 </h1>
 
-## 🔖 Sobre
+## 🔖 About
 
-O projeto **Foodfy** está sendo desenvolvido dentro do curso **LaunchBase** da escola de programação RocketSeat. O objetivo da aplicação é colocarmos em prática nossos conhecimentos adquiridos em aula desde os primeiro módulos até o final do curso. Portanto, **projeto em constante mudança**.  
+The Foodfy project is being developed within the LaunchBase course at the RocketSeat programming school. The purpose of the application is to put into practice our knowledge acquired in class from the first modules to the end of the course. Therefore, project in constant change.
 
 ---
 
-## 💻 Tecnologias utilizadas Back-end
+## 💻 Technologies used Back-end
 
 - [JavaScript](https://www.javascript.com/)
 - [NodeJs](https://nodejs.org/en/)
@@ -29,25 +29,25 @@ O projeto **Foodfy** está sendo desenvolvido dentro do curso **LaunchBase** da 
 
 ---
 
-## 💻 Tecnologias utilizadas Web
+## 💻 Technologies used Web
 
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
 - [Nunjucks](https://mozilla.github.io/nunjucks/)
 
-## ⇣ Como baixar o projeto
+## ⇣ How to download the project
 
 ```bash
-# Clonar o repositório
+# Clone the repository
 $ git clone https://github.com/bernardosertorio/site-foodfy
  
-# Instalar as dependências 
+# Install the dependencies 
 $ npm install
 
-# Iniciar o projeto
+# Start the project
 $ npm start
 ```
 
 ---
 
-Em desenvolvimento por 😃 Bernardo Sertório
+In development by 😃 Bernardo Sertório
